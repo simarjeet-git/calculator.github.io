@@ -1,6 +1,6 @@
 #container{
     display: grid;
-    justify-items: center;
+     
 }
 #calculatorbody{
     width: 500px;
@@ -10,6 +10,7 @@
 border: 70px solid rgb(3, 85, 105);
     display: grid;
     grid-template-rows:repeat(5,1fr);
+    justify-self: center;
     justify-items: center;
 }
 button{
@@ -28,7 +29,9 @@ button{
     margin-bottom: 90px;
 }
  #topbar{
+    display: flex;
+    justify-content: center;
     background-color: rgba(3, 88, 109, 0.945);
     margin-bottom: 70px;
-    position: fixed;
+   grid-row: 1/-1;
  }
