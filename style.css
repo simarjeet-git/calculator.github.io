@@ -27,6 +27,14 @@ button{
     background-color: wheat;
     margin-top: 70px;
     margin-bottom: 90px;
+    display: flex;
+    overflow: hidden;
+    font-size: x-large;
+    font-weight: bolder;
+    justify-content: center;
+    padding-top: 10px;
+    
+
 }
  #topbar{
     display: flex;
