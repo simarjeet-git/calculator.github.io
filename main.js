@@ -218,7 +218,11 @@ let finalresult = document.getElementById('resultdisplay').textContent = c
       
            }
  }
-                                                
+  let clear = document.getElementById('clear').addEventListener('click',cleardisplay)
+
+  function cleardisplay(){
+    document.getElementById('resultdisplay').textContent = '';
+  }
                                               
   
    
