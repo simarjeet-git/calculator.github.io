@@ -1,156 +1,28 @@
- 
-let pressbtn7 =  document.getElementById('btn7').addEventListener('click',printbtn7)
-  function printbtn7(){
-   const btn7 =  document.getElementById('btn7').innerText
-  
 
+ let getnumber;
+ let btnvalue = document.querySelectorAll('#btn')
+  let btnvaluearr = Array.from(btnvalue)
+  console.log(btnvaluearr)
+  for(var i = 0; i < btnvalue.length; i++) {
+    btnvalue[i].addEventListener("click", bindClick(i));
+}
 
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn7;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn8 =  document.getElementById('btn8').addEventListener('click',printbtn8)
-  function printbtn8(){
-  const btn8 =  document.getElementById('btn8').innerText
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn8;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn9 =  document.getElementById('btn9').addEventListener('click',printbtn9)
-  function printbtn9(){
-   const btn9 =  document.getElementById('btn9').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn9;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtnop1 =  document.getElementById('btndivision').addEventListener('click',printbtnd)
-  function printbtnd(){
-   const btnd =  document.getElementById('btndivision').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btnd;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn6 =  document.getElementById('btn6').addEventListener('click',printbtn6)
-  function printbtn6(){
-   const btn6 =  document.getElementById('btn6').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn6;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn5 =  document.getElementById('btn5').addEventListener('click',printbtn5)
-  function printbtn5(){
-   const btn5 =  document.getElementById('btn5').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn5;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn4 =  document.getElementById('btn4').addEventListener('click',printbtn4)
-  function printbtn4(){
-   const btn4 =  document.getElementById('btn4').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn4;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn3 =  document.getElementById('btn3').addEventListener('click',printbtn3)
-  function printbtn3(){
-   const btn3 =  document.getElementById('btn3').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn3;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn2 =  document.getElementById('btn2').addEventListener('click',printbtn2)
-  function printbtn2(){
-   const btn2 =  document.getElementById('btn2').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn2;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn1 =  document.getElementById('btn1').addEventListener('click',printbtn1)
-  function printbtn1(){
-   const btn1 =  document.getElementById('btn1').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn1;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtnm =  document.getElementById('btnmultiply').addEventListener('click',printbtnm)
-  function printbtnm(){
-   const btnm=  document.getElementById('btnmultiply').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btnm;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtns =  document.getElementById('btnsubtraction').addEventListener('click',printbtns)
-  function printbtns(){
-   const btns =  document.getElementById('btnsubtraction').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btns;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtna =  document.getElementById('btnplus').addEventListener('click',printbtna)
-  function printbtna(){
-   const btna =  document.getElementById('btnplus').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btna;
-saveprint.appendChild(printdisplay)
-  }
-  let pressbtn0 =  document.getElementById('btn0').addEventListener('click',printbtn0)
-  function printbtn0(){
-   const btn0 =  document.getElementById('btn0').innerText
-  
-
-
-  let saveprint =  document.getElementById('resultdisplay');
-let printdisplay =  document.createElement('h1');
-printdisplay.innerText = btn0;
-saveprint.appendChild(printdisplay)
-  }
+function bindClick(i) {
+ return function() {
+  getnumber = btnvalue[i].textContent
+  displayprint();
+     console.log(getnumber);
+        
+ };
+}
+console.log(getnumber);
+function displayprint(){
+let printdisplay = document.getElementById('resultdisplay')
+let createtag = document.createElement('h1')
+createtag.innerText = getnumber
+printdisplay.appendChild(createtag)
+}
+   
   let pressbtnequal =  document.getElementById('btnequal').addEventListener('click',printbtnequal)
   function printbtnequal(){
    const btnqual = document.getElementById('resultdisplay').textContent
@@ -218,7 +90,7 @@ let finalresult = document.getElementById('resultdisplay').textContent = c
       
            }
  }
-  let clear = document.getElementById('clear').addEventListener('click',cleardisplay)
+  let clear = document.getElementById('btnclear').addEventListener('click',cleardisplay)
 
   function cleardisplay(){
     document.getElementById('resultdisplay').textContent = '';
