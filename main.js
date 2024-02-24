@@ -2,18 +2,21 @@
  let getnumber;
  let btnvalue = document.querySelectorAll('#btn')
   let btnvaluearr = Array.from(btnvalue)
+
+
   console.log(btnvaluearr)
-  for(var i = 0; i < btnvalue.length; i++) {
-    btnvalue[i].addEventListener("click", bindClick(i));
+  for(let i = 0; i < btnvaluearr.length; i++) {
+    btnvaluearr[i].addEventListener("click", bindClick(i));
 }
 
 function bindClick(i) {
  return function() {
-  getnumber = btnvalue[i].textContent
+  getnumber = btnvaluearr[i].textContent
   displayprint();
      console.log(getnumber);
         
  };
+
 }
 console.log(getnumber);
 function displayprint(){
